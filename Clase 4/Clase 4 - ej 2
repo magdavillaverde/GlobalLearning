@@ -1,0 +1,5 @@
+function Numopuesto(numero) {
+ var op = numero * -1;
+  return op;
+}
+console.log(Numopuesto(5));
