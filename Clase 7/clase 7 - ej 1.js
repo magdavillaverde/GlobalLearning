@@ -1,21 +1,23 @@
 class Heroe {
-    name
-    position
-    life
-    dano
-    experience
-    constructor (name, position, life, dano, experience) {
-        this.name = name;
-        this.position = position;
-        this.life = life;
-        this.dano = dano;
-        this.experience = experience;     
-    }
+  name
+  position
+  life
+  dano
+  experience
+
+  //constructor (name) {
+  constructor (name="heroe") {
+      //this.name = name || "heroe";
+      this.position = "00";
+      this.life = 100;
+      this.dano = 5;
+      this.experience = 0;     
+  }
 }
 
 function heroeName(name){
-  const Name = new Heroe (name, "100", "100", "5","0");
-  console.log(Name);
+const Name = new Heroe (name);
+console.log(Name);
 }
 
-heroeName("spiderman");
+heroeName("Spier");
