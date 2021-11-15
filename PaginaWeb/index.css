@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(238, 199, 24);
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+}
+
+nav a:visited,
+nav a:link {
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul {
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 70px 0 10px; 
+}
+
+main {
+    display: block;
+    background-image: url("Images/ColorFondo.JPG");
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+}
+
+footer{
+    padding: 15px;
+}
+
+aside, article {
+    padding: 2em;
+}
+
+aside {
+    text-align: center;
+    max-width: 30%;
+}
+
+article {
+    width: 75%;
+}
+
+@media only screen and (min-width: 768px){
+    main {
+        display: flex;
+    }
+    aside {
+        margin-left: 2;
+    }
+}
+
+.logo {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0.5em;
+}
+
+.subtitle {
+    background-color: rgb(240, 255, 246);
+    font-size: 0.9em;
+    padding: 1px;
+    border: solid 0.2em black;
+    margin-top: 0.9em;
+}
+
+/* catalogo */ 
+
+.element {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(54, 11, 11);
+    border: solid 1px;
+    color: cornsilk;
+}
+
+.image-chipa {
+    max-width: 100%;
+    max-height: 75%;
+}
+
+.element-information {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0.2em;
+}
+
+.element-information .title {
+    font-weight: bold;
+}
+
+.element-information .price {
+    text-align: right;
+}
+
+.element button {
+    background-color: rgb(211, 198, 13);
+    padding: 10px;
+    border: solid 1px  rgb(211, 198, 13);
+    border-radius: 3px;
+    margin-top: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
