@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina web de MAGDA</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img href="deliv" class="deliv" src="Images/delivery.png" alt="TiendaChipa"></aside>
+        <article>
+         <h2>Order</h2>
+         <div class="order-selected">
+            <img class="chipaclasico" src="" alt="img-chipaclasico">
+            <div class="order-element-information">
+                <div class="title">
+                </div>
+                <div class="price">
+                </div>
+            </div>
+         </div>
+         <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+             <div class="input-group">
+                <div>
+                    <label for="first-name">Nombre</label>
+                    <input class="first-name" type="text" name="first-name" id="first-name" required>
+                    <label for="last-name">Apellido</label>
+                    <input class="last-name" type="text" name="last-name" id="last-name"required>
+                </div>
+                <div>
+                    <label for="address">Dirección</label>
+                    <input class="address" type="text" name="address" id="address"required>
+                    <label for="province">Provincia</label>
+                    <input class="province" type="text" name="province" id="province"required>
+                </div>
+                <div>
+                    <label for="country">País</label>
+                    <input class="country" type="text" name="country" id="country"required>
+                    <label for="dept-floor">Depto/Piso</label>
+                    <input class="dept-floor" type="text" name="dept-floor" id="dept-floor">
+                </div>
+                <div>
+                    <label for="mail">Mail</label>
+                    <input class="mail" type="text" name="mail" id="mail"required>
+                    <label for="phoneNum">Teléfono</label>
+                    <input class="phoneNum" type="text" name="phoneNum" id="phoneNum"required>
+                </div>
+                <div>
+                    <label for="product">Producto a ordenar</label>
+                    <input class="product" type="text" name="product" id="product"required>
+                </div>
+             </div>
+             <input class="reset" type="reset" value="Reset">
+             <input class="submit" type="submit" value="Order">
+         </form>
+         <div>
+            <button class="volver-catalog">
+                <a href="catalogo.html">Volver al Catálogo</a>
+            </button>
+         </div>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", ()=>{
+        const order=localStorage.getItem("order");
+        if (order){
+            const catalogOrder=JSON.parse(order);
+            const orderSelected=document.querySelector(".order-selected");
+            orderSelected.querySelector(".title").innerText=catalogOrder.title;
+            orderSelected.querySelector(".price").innerText=catalogOrder.price;
+            const img=orderSelected.querySelector("img");
+            img.setAttribute("src", `Images/${catalogOrder.id}.jpg`);
+        }
+    });
+</script>
+</html>

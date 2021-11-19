@@ -17,14 +17,18 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(66, 4, 4);
     padding: 10px;
 }
 
 nav a:visited,
 nav a:link {
-    color: black;
+    color: white;
+    font-weight: bold;
     text-decoration: none;
+    font-size: 1.3em;
+    background-color: rgba(82, 33, 33, 0.212);
+    border-radius: 3px;
 }
 
 nav > ul {
@@ -48,6 +52,9 @@ main {
 
 footer{
     padding: 15px;
+    background-image: url("Images/banner.png");
+    border: solid 2px rgba(82, 33, 33, 0.212);
+   
 }
 
 aside, article {
@@ -73,8 +80,15 @@ article {
 }
 
 .logo {
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 50%;
+    max-width: 70%;
+}
+
+.deliv {
+    max-height: 40%;
+    max-width: 70%;
+    border: solid 2px  wheat;
+    border-radius: 30px;
 }
 
 h1 {
@@ -82,18 +96,39 @@ h1 {
     margin-top: 0.5em;
 }
 
+h2 {
+    font-size: 2.3em;
+    font-style: oblique;
+    color: rgb(54, 11, 11);
+    margin-top: 0.5em;
+} 
+
 .subtitle {
-    background-color: rgb(240, 255, 246);
+    background-color: rgb(66, 4, 4);
+    color: white;
     font-size: 0.9em;
     padding: 1px;
     border: solid 0.2em black;
     margin-top: 0.9em;
+    width: 580px;
+    display: flex;
+}
+
+.subtitle a {
+    text-decoration: none;
+    color:white;
+    font-style: oblique;
+    margin-left: 3px;
 }
 
 /* catalogo */ 
+.columns-desktop {
+    display: flex;
+}
 
 .element {
-    width: 250px;
+    width: 200px;
+    height: auto;
     padding: 10px;
     margin: 10px;
     background-color: rgb(54, 11, 11);
@@ -101,16 +136,30 @@ h1 {
     color: cornsilk;
 }
 
-.image-chipa {
-    max-width: 100%;
-    max-height: 75%;
+.img-chipaclasico {
+    width: 200px;
+    height: 130px;
+    display: block;
+}
+
+.img-chiparosquita {
+    width: 200px;
+    height: 130px;
+    display: block;
+}
+
+.img-chiparelleno {
+    width: 200px;
+    height: 130px;
+    display: block;
 }
 
 .element-information {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.3em;
+    margin-top: 0.5em;
 }
 
 .element-information .title {
@@ -121,13 +170,112 @@ h1 {
     text-align: right;
 }
 
+.element-information .leyenda {
+    text-align: center;
+}
+
 .element button {
-    background-color: rgb(211, 198, 13);
-    padding: 10px;
-    border: solid 1px  rgb(211, 198, 13);
+    background-color: rgb(231, 182, 21);
+    padding: 7px;
+    border: solid 1px white;
     border-radius: 3px;
-    margin-top: 0.5em;
+    margin-top: 1em;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+}
+
+
+/* order */ 
+
+.order-element-information {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0.3em;
+    margin-top: 0.5em;
+}
+
+.order-element-information .title {
+    font-weight: bold;
+}
+
+.order-element-information .price {
+    text-align: left;
+}
+
+.input-group {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+.first-name, .address, .mail {
+    width: 300px;
+    background-color:rgb(243, 239, 183);
+    border: solid 1px rgb(65, 5, 5);
+    border-radius: 3px;
+}
+
+.last-name, .province, .country, .dept-floor, .phoneNum, .product {
+    width: 150px;
+    background-color:rgb(243, 239, 183);
+    border: solid 1px rgb(65, 5, 5);
+    border-radius: 3px;
+}
+
+
+.reset {
+    color: rgb(66, 4, 4);
+    margin-top: 0.8em;
+    font-weight: bold;
+    font-size: 1em;
+    border: solid 1px rgb(65, 5, 5);
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.submit {
+    color: rgb(66, 4, 4);
+    margin-top: 0.8em;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 1em;
+    border: solid 1px rgb(65, 5, 5);
+    border-radius: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.volver-catalog {
+    margin-top: 2em;
+    font-weight: bold;
+    font-size: 1em;
+    font-style: oblique;
+    padding: 3px;
+    border: solid 2px rgb(65, 5, 5);
+    border-radius: 5px;
+    background-color:rgb(212, 169, 26);
+    margin-left: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* contact */ 
+.chipaceros{
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-style: oblique;
 }

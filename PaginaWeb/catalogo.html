@@ -16,33 +16,67 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <aside><img href="logo" class="logo" src="Images/LogoTiendaChipa.JPG" alt="TiendaChipa"></aside>
+        <aside><img href="logo" class="logo" src="Images/logo.png" alt="TiendaChipa"></aside>
         <article>
-            <h1>Catálogo</h1>
+            <h2>Catálogo</h2>
             <section class="columns-desktop">
                 <div class="element">
-                    <img class="image-chipa" src="Images/fondochipa.jpg" alt="chipá">
+                    <img class="img-chipaclasico" src="Images/chipaclasico.jpg" alt="chipá">
                     <div class="element-information">
                         <div class="title">
-                            Chipa azul
+                            Chipá clásico
                         </div>
                         <div class="price">
                             $500
                         </div>
                     </div>
-                    <p>
-                        El mejor chipá de Bariloche
+                    <p class="leyenda">
+                        Receta original
                     </p>
-                    <button>
+                    <button data-order="chipaclasico">
                         Pedir aquí
                     </button>
                 </div>
+                <div class="element">
+                        <img class="img-chiparosquita" src="Images/chiparosquita.jpg" alt="chipá">
+                        <div class="element-information">
+                            <div class="title">
+                                Chipá rosquita
+                            </div>
+                            <div class="price">
+                                $600
+                            </div>
+                        </div>
+                        <p class="leyenda">
+                            Receta del litoral
+                        </p>
+                        <button data-order="chiparosquita">
+                            Pedir aquí
+                        </button>
+                    </div>
+                    <div class="element">
+                        <img class="img-chiparelleno" src="Images/chiparelleno.jpg" alt="chipá">
+                        <div class="element-information">
+                            <div class="title">
+                                Chipá relleno
+                            </div>
+                            <div class="price">
+                                $800
+                            </div>
+                        </div>
+                        <p class="leyenda">
+                            Relleno con jamón
+                        </p>
+                        <button data-order="chiparelleno">
+                            Pedir aquí
+                        </button>
+                    </div>
             </section>
         </article>
     </main>
@@ -50,11 +84,11 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
     </footer>
 </body>
-
+<script src="catalogo.js"></script>
 </html>
